@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/selectAll"
+        app:actionLayout="@layout/select_all_custom_layout"
+        android:title="@string/selectAll"
+        app:showAsAction="ifRoom">
+    </item>
+
+    <item
+        android:id="@+id/covert_to_pdf"
+        app:actionLayout="@layout/custom_layout"
+        android:title=""
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/delete_icon"
+        android:title="@string/delete"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="ifRoom">
+    </item>
+
+</menu>

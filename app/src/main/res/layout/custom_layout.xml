@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/convertToPdfButton"-->
+<!--        style="@style/Widget.Material3.Button.Icon"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:text="@string/convert_to_pdf"-->
+<!--        android:backgroundTint="@color/blue_violet"-->
+<!--        app:cornerRadius="20dp"-->
+<!--        app:icon="@drawable/ic_pdf"-->
+<!--        app:iconTint="@null"-->
+<!--        android:textColor="@color/white"/>-->
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/convertToPdfButton"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:backgroundTint="@color/maroon"
+    app:cardCornerRadius="25dp">
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="0.5dp"
+        android:src="@drawable/ic_pdf" />
+
+</com.google.android.material.card.MaterialCardView>

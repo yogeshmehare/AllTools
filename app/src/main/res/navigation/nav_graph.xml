@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imagesSelectionFragment">
+    <fragment
+        android:id="@+id/imagesSelectionFragment"
+        android:name="com.yogesh.alltools.imagetopdf.ImagesSelectionFragment"
+        android:label="fragment_image_selection"
+        tools:layout="@layout/fragment_image_selection" >
+        <action
+            android:id="@+id/action_imagesSelectionFragment_to_viewImageInFullScreenFragment"
+            app:destination="@id/viewImageInFullScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewImageInFullScreenFragment"
+        android:name="com.yogesh.alltools.imagetopdf.ViewImageInFullScreenFragment"
+        android:label="fragment_imageviewer"
+        tools:layout="@layout/fragment_imageviewer" >
+        <action
+            android:id="@+id/action_viewImageInFullScreenFragment_to_imagesSelectionFragment"
+            app:destination="@id/imagesSelectionFragment" />
+    </fragment>
+</navigation>

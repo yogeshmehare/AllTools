@@ -1,0 +1,32 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimaryDark">@color/input_pad_background</item>
+        <item name="android:windowBackground">@color/input_pad_background</item>
+        <item name="android:navigationBarColor">@color/operators_pad_background</item>
+    </style>
+
+    <!-- Pad Item Base Style -->
+    <style name="PadItem" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="PadItem.Main" parent="PadItem">
+        <item name="android:textSize">25sp</item>
+        <item name="android:background">@drawable/pad_item_selector</item>
+    </style>
+
+    <style name="PadItem.Operator" parent="PadItem">
+        <item name="android:background">@drawable/operator_item_selector</item>
+    </style>
+
+    <style name="PadItem.Number" parent="PadItem">
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@drawable/number_item_selector</item>
+    </style>
+
+</resources>

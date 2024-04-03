@@ -32,7 +32,7 @@ class ImageAdapter(
 
         holder.checkBox.isChecked = PictureContent.items[position].checked
 
-        holder.checkBox.setOnCheckedChangeListener { view, isChecked ->
+        holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
             PictureContent.items[position].checked = isChecked
         }
 

@@ -82,9 +82,9 @@ class StopWatchActivity : ComponentActivity() {
             }
             val handler = Handler(Looper.getMainLooper())
             var totalSecs = 0
-            var hours = 0
-            var minutes = 0
-            var seconds = 0
+            var hours: Int
+            var minutes: Int
+            var seconds: Int
 
             val runnable = object : Runnable {
                 override fun run() {
@@ -315,6 +315,6 @@ fun TextBox(number: String) {
 @Composable
 fun StopWatchPreview() {
     AllToolsTheme {
-        StopWatch(runnable = {}, timer = "00:00:00", handler = Handler(), resetTimer = {})
+        StopWatch(runnable = {}, timer = "00:00:00", handler = Handler(Looper.getMainLooper()), resetTimer = {})
     }
 }

@@ -557,7 +557,7 @@ object PictureContent {
         items.clear()
         if (dir.exists()) {
             val files = dir.listFiles()
-            for (file in files) {
+            for (file in files!!) {
                 val absolutePath = file.absolutePath
                 val extension = absolutePath.substring(absolutePath.lastIndexOf("."))
                 if (extension.equals(".jpg",true) || extension.equals(".jpeg",true) || extension.equals(".png",true)) {
@@ -592,12 +592,10 @@ object FilePathUtil {
         // Use a CursorLoader to query the data and return the path
         val cursorLoader = CursorLoader(context!!, uri!!, projection, null, null, null)
         val cursor: Cursor = cursorLoader.loadInBackground()!!
-        if (cursor != null) {
-            val column_index: Int = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
-            cursor.moveToFirst()
-            filePath = cursor.getString(column_index)
-            cursor.close()
-        }
+        val column_index: Int = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        cursor.moveToFirst()
+        filePath = cursor.getString(column_index)
+        cursor.close()
         return filePath
     }
 }

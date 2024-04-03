@@ -171,7 +171,6 @@ fun MyAgeCalculator() {
 
     }
     val snackState = remember { SnackbarHostState() }
-    val snackScope = rememberCoroutineScope()
     SnackbarHost(hostState = snackState, Modifier)
     if (openDialog) {
         val datePickerState = rememberDatePickerState(initialSelectedDateMillis = 946665000000)

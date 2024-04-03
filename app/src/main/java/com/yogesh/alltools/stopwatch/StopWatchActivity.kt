@@ -23,7 +23,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
@@ -90,11 +89,11 @@ class StopWatchActivity : ComponentActivity() {
                 override fun run() {
 //                    timer = mService?.randomNumber.toString()
                     totalSecs++
-                    hours = totalSecs / 3600;
-                    minutes = (totalSecs % 3600) / 60;
-                    seconds = totalSecs % 60;
+                    hours = totalSecs / 3600
+                    minutes = (totalSecs % 3600) / 60
+                    seconds = totalSecs % 60
 
-                    timer = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+                    timer = String.format("%02d:%02d:%02d", hours, minutes, seconds)
                     handler.postDelayed(this, 1000)
                 }
             }

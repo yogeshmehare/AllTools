@@ -28,7 +28,7 @@ class ImageAdapter(
             .with(context)
             .load(Uri.parse(PictureContent.items[position].uri.toString()))
             .placeholder(R.drawable.ic_gallery)
-            .into(holder.imageView);
+            .into(holder.imageView)
 
         holder.checkBox.isChecked = PictureContent.items[position].checked
 

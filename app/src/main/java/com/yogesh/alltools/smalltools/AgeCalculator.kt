@@ -26,7 +26,6 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -41,11 +40,10 @@ import androidx.compose.ui.unit.sp
 import com.yogesh.alltools.R
 import com.yogesh.alltools.utils.Utils
 import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.LocalTime
 import java.time.Period
 
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun AgeCalculator() {
     MyAgeCalculator()
